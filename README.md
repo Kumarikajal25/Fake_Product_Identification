@@ -1,5 +1,5 @@
 # Fake Product Identification System
-- **Aim To Identify The Fake Product**
+- **Aim To Identify The Fake Product Using BlockChain**
 # User Panel
 ![Screenshot 2024-08-02 132057](https://github.com/user-attachments/assets/7741d009-239d-41f5-acc3-09ba7c6581c5)
 # Manufacture Panel
