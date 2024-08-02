@@ -1,0 +1,291 @@
+@import "../../mediaquires.scss";
+
+
+$defaultInputFormHeight: 70vh;
+
+.box {
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 140px;
+  align-items: center;
+  @include sm{
+    transform: scale(0.70);
+  }
+  @include md{
+    flex-direction: row;
+  justify-content:space-evenly;
+  transform: scale(0.85);
+  }
+  @include selection{
+    transform:scale(0.5);
+  }
+  
+   .Tittle-container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    gap:20px;
+    margin-bottom: 40px;
+    @include sm{
+      transform: scale(1.1);
+    }
+    @include md{
+      margin-bottom: 0px;
+    }
+   
+    .image-container{
+      width: 70px; 
+      height: 70px;
+      border-radius: 50%;
+      overflow: hidden;
+      @include md{
+        width: 200px; 
+      height: 200px; 
+     
+      } 
+      @include selection{
+        width: 114px;
+      }
+      
+        img{
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover; 
+        }
+       
+    }
+    .Tittle{
+      display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-evenly;
+    align-items: center;
+    @include md{
+      gap:20px;
+    }
+    h1{
+      text-transform: uppercase;
+      color: rgb(182, 186, 189);
+      max-width: fit-content;
+      font-size: large;
+      overflow: hidden;
+      @include md{
+        font-size: 25px;
+        white-space: nowrap;
+        border-right: 0.05em solid rgb(148, 148, 148);
+        animation: typing09 6s steps(40,end) infinite alternate,
+        cursor07 5s step-end infinite alternate;
+      }
+    
+    }
+    .subtitle{
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    color: #686664dc;
+    }
+    .btn{
+      font-size: smaller;
+      background-color: #1d191c99;
+      border-color: #8d1250;
+      border-radius: 23px;
+      width: 8em;
+      height: 2em;
+     
+      @include sm{
+        font-size: 17px;
+      }
+      @include md{
+        font-size: 18px;
+        
+       
+        
+      }
+      
+    }
+    }
+    }
+   
+    .Input-container{
+      position: relative;
+      background-color: rgb(30, 27, 27);
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 34rem;
+    min-width: 28rem;
+      &:before{
+        content:" ";
+        position: absolute;
+        background: linear-gradient(0deg , transparent,
+        transparent , #45f3ff ,#45f3ff,#45f3ff);
+        z-index:1;
+        top:-40%;
+        height: 70vh;
+        width:60%;
+       transform-origin: bottom right;
+      animation:animate 6s linear -3s infinite;
+       }
+       .border-line{
+         position: absolute;
+         top:0;
+         inset:0;
+         content:" ";
+        position: absolute;
+        background: linear-gradient(0deg , transparent,
+        transparent , #ff2770 ,#ff2770,#ff2770 );
+        z-index:1;
+        top:-40%;
+        height: 70vh;
+        width:60%;
+       transform-origin: bottom right;
+      animation:animate 6s linear infinite;
+      &:before{
+        animation-delay: -1.5s;
+      }
+         &:after{
+          animation-delay: 4.5s ;
+        }
+       }
+  .Input-Form {
+    display: flex;
+   
+    form{
+      position: absolute;
+        inset: 4px;
+        background: #201f1f;
+        border-radius: 8px;
+        z-index: 2;
+        flex-direction: column;
+    align-items: center;
+     gap: 20px;
+    padding: 40px 21px;
+    display: flex;
+    font-size:20px;
+    @include md{
+      gap:30px;
+      padding: 40px 55px;
+    }
+  
+    &.signUp{
+      gap:4px;
+      @include md{
+        gap:10px;
+      }
+    }
+    h2{
+        font-size: 40px;
+    }
+    .inputBox{
+      position: relative;
+      width:350px;
+    margin-top:20px;
+    
+    .input{
+      position: relative;
+      width: 100%;
+      padding:20px 10px 10px;
+      background: transparent;
+      outline:none;
+      border: none;
+      box-shadow:  none;
+      color: whitesmoke;
+      font-size: 1em;
+      letter-spacing: 0.05em;
+      transition: 0.5s;
+      z-index:10;
+      &:valid ~span , &:focus ~span{
+        color:#ffff;
+        font-size: 1em;
+        transform: translateY(-34px);
+      }
+      &:valid ~i , &:focus ~i{
+        height:40px;
+        background: #1a1818f5;
+      }
+
+    }
+    span{
+        position:absolute;
+        left:0;
+        padding: 20px 0px 10px;
+        pointer-events: none;
+        color: #8f8f8f;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+      transition: 0.5s;
+    } 
+    i{
+      position:absolute;
+      left:0;
+      bottom:0;
+      width:100%;
+      height:1px;
+      background: #cdbfbf;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: 0.5s;
+      pointer-events: none;
+    
+    }
+    }}
+    .links{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .check{
+       display: flex;
+       .chick{
+        width: 20px;
+        margin-top: 0px;
+       }
+       .agree{
+        margin-left: 5px;
+        color:#8f8f8f;
+       }
+      }
+      a{
+        margin:10px 0;
+        font-size:0.90em;
+        color:#8f8f8f;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover, &:nth-child(2){
+          color: rgb(239, 242, 246);
+        }
+      } 
+    }
+   input{
+    border: none;
+    outline: none;
+    color: #201f1f;
+    padding:9px 10px;
+    background: #ffff;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top:8px;
+    &:active{
+      opacity:0.8;
+    }
+    &:hover{
+      background: transparent;
+      color: #fcf3f3;
+     border: 2px rgba(110, 107, 107, 0.879) solid;
+    }
+   }
+  } }
+}
+@keyframes animate {
+ 0%{
+  transform: rotate(0deg);
+ }
+
+ 100%{
+  transform: rotate(360deg);
+ }
+}
+
+  

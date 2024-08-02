@@ -1,0 +1,231 @@
+@import "../../mediaquires.scss";
+.Scan-Product-form-1{
+    display: flex;
+     justify-content:space-around;
+    align-items: center;
+    transform: scale(0.6);
+    @include md{
+        transform: scale(1.0);
+        height:92vh;
+    }
+    .Scan-section-1{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    height: 42rem;
+    width: 39rem;
+    border-radius: 15px;
+    background-color: #1a1819;
+    box-shadow: -3px 5px 5px rgb(22, 21, 21) ,3px 5px 5px rgb(22, 21, 21);
+    cursor: pointer;
+    @include md{
+        flex-direction: row;
+        gap: 50px;
+         height:70%;
+        width: 52rem;
+    }
+    &:hover{
+        transform: scale(1.01);
+    }
+    h1{
+        text-align: center;
+        @include md{
+            font-size: 35px;
+        }
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+    }
+    .product-scan-1{
+        width: 82%;
+        position: relative;
+        left:10px;
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        bottom: 0px;
+        @include md{
+            left:15px;
+            width: 45%;
+            bottom: 20px;
+        }
+        label{
+            display: flex;
+    position: relative;
+    bottom: 2px;
+    
+   
+    input{
+        position: relative;
+        left:5px;
+    }
+        }
+    button{
+        position: relative;
+        top: 5px;
+        left: 0;
+        }
+        #readerFile{
+            @include md{
+                height:19rem;
+            }
+            #html5-qrcode-button-file-selection{
+                width:12rem;
+             height:2.1rem;
+            }
+            #html5-qrcode-button-camera-start{
+                top:0px;
+            }  
+           canvas{
+            height:100px !important;
+            width:150px !important;
+            margin-top: 5px !important;
+           }
+           video{
+            width:100% !important;
+            max-width:704px !important ;
+           }
+        }
+    
+        .encryptData{
+            overflow: auto;
+            word-wrap: break-word;
+            height: 100%;
+        }
+    }
+    
+    
+    button{
+        color: #d3cdd9;
+        background-color: #4f1a35;
+        width:19rem;
+        height:1.7rem;
+        position: relative;
+        margin-top: 17px;
+    bottom: 10px;
+    font-size: 15px;
+    left:60px;
+    border-radius: 10px;
+    border-style: none;
+    }
+    .input-details-1{
+        display: flex;
+    flex-direction: column;
+    position: relative;
+    top:0px;
+    gap:17px;
+    justify-content: center;
+       left:2px;
+       width: 100%;
+    max-width: 360px;
+       @include md{
+        gap:15px;
+        top:35px;
+        &.input-loader{
+            top:0px;
+        }
+       }
+       
+    label{
+        font-size:17px;
+        &.details{
+            display: flex ;
+            justify-content: space-between;
+        }
+        &.loader-specific{
+            display: none;
+        }
+    }
+    input{
+        background-color: #201e1e;
+    border-style: none;
+    position: relative;
+    left: 10px;
+    height: 1.5rem;
+    width: 15rem;
+    
+    }
+    textarea{
+        background-color: #201e1e;
+        border-style: none;
+        position: relative;
+         left: 5px;
+    }}
+    .loader{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 23px;
+        @include md{
+            left: 30px;
+           
+
+        }
+        .Ring{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+        
+            span{ 
+                 background-color: #4dbec6fb;
+                position: absolute;
+         height: 10px;
+         width: 10px;
+          border-radius: 50%;
+     transform:  rotate(calc(var(--i) * (360deg/15))) translateY(55px);
+         animation:dot 1.5s linear infinite;
+         animation-delay: calc(var(--i) * 0.1s);
+         opacity: 0;
+            }
+           
+      }
+    
+    
+    }
+    p{
+        font-family: monospace;
+font-size: 18px;
+color: #c7dd76e3;
+
+animation: text 3s ease-in infinite;
+&.fake{
+    
+    font-size: 20px;
+  
+    color:#f55858e8;
+}
+    }
+   
+    }
+  
+    
+    
+}
+
+@keyframes dot {
+    0%{
+        opacity: 1;
+
+    }
+    100%{
+       opacity: 0;
+
+    }
+ }
+ 
+    
+ @keyframes text {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.09);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
